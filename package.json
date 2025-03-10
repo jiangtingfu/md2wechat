@@ -1,13 +1,17 @@
 {
   "scripts": {
     "start": "npm-run-all --parallel less serve",
-    "less": "chokidar 'src/assets/less/**/*.less' -c 'lessc src/assets/less/themes/index.less src/assets/css/themes.css'",
-    "serve": "serve src -p 8086"
+    "less": "chokidar 'src/assets/less/**/*.less' -c 'lessc src/assets/less/themes/index.less src/assets/less/themes/index.css'",
+    "serve": "serve src -p 8086",
+    "less:css": "lessc src/assets/less/themes/index.less src/assets/less/themes/index.css"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "less": "^4.2.0",
     "npm-run-all": "^4.1.5",
     "serve": "^14.2.3"
+  },
+  "dependencies": {
+    "marked": "5.1.0"
   }
 }
